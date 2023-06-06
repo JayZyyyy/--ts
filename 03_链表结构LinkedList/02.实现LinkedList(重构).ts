@@ -1,5 +1,3 @@
-import { flatMap } from 'rxjs'
-
 // 1. 创建Node节点类
 class Node<T> {
   value: T
@@ -98,6 +96,10 @@ class LinkedList<T> {
     } else {
       // 重构成如下代码
       const previous = this.getNode(position - 1)
+
+      // 给current重新赋值
+      current = previous!.next
+
       // 找到需要的节点
       previous!.next = previous?.next?.next ?? null
     }
