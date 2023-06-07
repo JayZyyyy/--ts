@@ -6,3 +6,9 @@ export class Node<T> {
     this.value = value
   }
 }
+
+
+export class DoublyNode<T> extends Node<T> {
+  prev: DoublyNode<T> | null = null
+  next: DoublyNode<T> | null = null
+}
