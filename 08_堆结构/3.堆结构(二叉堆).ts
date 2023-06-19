@@ -116,7 +116,7 @@ export default class Heap<T> {
     this.length = arr.length
 
     // 2.从第一个非叶子节点, 开始进行下滤操作
-    const start = Math.floor((this.length - 1) / 2)
+    const start = Math.floor((this.length / 2) - 1)
     for (let i = start; i >= 0; i--) {
       this.heapify_down(i)
     }
@@ -141,11 +141,11 @@ const arr = [19, 100, 36, 17, 3, 25]
 // }
 
 // 3.测试批量建堆
-const heap = new Heap<number>(arr, false)
+// const heap = new Heap<number>(arr, false)
 // console.log(arr)
 // cbtPrint(arr)
 // console.log(heap.extract())
 
-heap.print()
+// heap.print()
 
 export {}

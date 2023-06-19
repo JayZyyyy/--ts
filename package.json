@@ -4,9 +4,8 @@
   "description": "",
   "main": "1.js",
   "dependencies": {
-    "hy-algokit": "^1.2.1"
+    "hy-algokit": "^1.4.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

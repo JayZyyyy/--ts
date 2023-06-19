@@ -1,0 +1,21 @@
+import ArrayQueue from '../02_队列结构Queue/1.实现队列结构'
+
+class ArrayDeque<T> extends ArrayQueue<T> {
+  addFront(value: T) {
+    this.data.unshift(value)
+  }
+
+  removeBack() : T | undefined {
+    return this.data.pop()
+  }
+}
+
+const deque = new ArrayDeque<string>()
+deque.enqueue("aaa")
+deque.enqueue("bbb")
+deque.enqueue("ccc")
+deque.addFront("abc")
+deque.addFront("cba")
+while (!deque.isEmpty()) {
+  console.log(deque.removeBack())
+}
