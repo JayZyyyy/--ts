@@ -94,11 +94,12 @@ const arrFill = [0, 1, 2, 3, 4, 5, 6]
 // console.log(Fill(arrFill, 12, 2, 5))
 
 // 10. 数组扁平
-function Flat(arr=[]) {
-  return arr.reduce((t, v) => t.concat(Array.isArray(v) ? Flat(v) : v), [])
+function Flat(arr=[], size = 0) {
+  if (size === 0) return arr
+  return arr.reduce((t, v) => t.concat(Array.isArray(v) ? Flat(v, size - 1) : v), [])
 }
 const arrFlat = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
-// console.log(Flat(arrFlat))
+console.log(Flat(arrFlat, 1))
 
 // 11. 数组去重
 function Uniq(arr = []) {
